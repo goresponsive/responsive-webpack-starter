@@ -1,0 +1,5 @@
+dist
+webp-cache
+node_modules
+.git
+ios

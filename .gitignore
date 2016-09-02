@@ -1,0 +1,11 @@
+/ios/Marsh Presentation/www
+.DS_Store
+dist
+*.log
+coverage
+.idea
+app/media
+
+# Generated modules
+node_modules
+webp-cache

@@ -1,0 +1,35 @@
+@import '~base.scss';
+
+:local(.footer) {
+  composes: background-white from 'sass!../../css/colors.scss';
+  composes: LatoRegular from 'sass!../../css/colors.scss';
+  position: relative;
+  font-weight: 100;
+  z-index: 9;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: -5px;
+  text-align: center;
+  margin-top:-5px;
+  border-top:1px solid #000;
+  text-align: left;
+  @media(min-width:$ipadPort) {
+    :global(.pull-right) {
+      text-align: right;
+    }
+  }
+  :global(.footer-container) {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  a {
+    color: #383838;
+    &:hover {
+      color: #73df31;
+    }
+  }
+}

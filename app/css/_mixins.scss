@@ -1,0 +1,113 @@
+// scss-lint:disable all
+
+@mixin dead-center() {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin arrow($direction, $size, $color) {
+  display: block;
+  height: 0;
+  width: 0;
+
+  @if $direction == 'top' {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == 'right' {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if $direction == 'bottom' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+  } @else if $direction == 'left' {
+    border-top: $size solid transparent;
+    border-right: $size solid $color;
+    border-bottom: $size solid transparent;
+  } @else if $direction == 'top-left' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $direction == 'top-right' {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+  } @else if $direction == 'bottom-left' {
+    border-bottom: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $direction == 'bottom-right' {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+  }
+}
+
+@mixin rem($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function rem($values) {
+  // Create a couple of empty lists as output buffers.
+  $font-size: $rem-font-multiplyer;
+  $rem-values: ();
+
+  // Loop through the $values list
+  @each $value in $values {
+    // Ensure all pixel values are rounded to the nearest pixel.
+    @if $value == 0 or $value == 0px { // scss-lint:disable ZeroUnit
+      // 0 -- use it without a unit
+      $rem-values: join($rem-values, 0);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+      // px value given - calculate rem value from font-size
+      $new-rem-value: $value / $font-size;
+      $new-rem-value: strip-units($new-rem-value);
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == '%') {
+      $rem-values: join($rem-values, #{$value});
+    } @else if $value == auto { // auto - don't add px or rem
+      $rem-values: join($rem-values, auto);
+    } @else { // unitless value
+      $rem-values: join($rem-values, #{$value}rem);
+    }
+  }
+
+  @return $rem-values;
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
