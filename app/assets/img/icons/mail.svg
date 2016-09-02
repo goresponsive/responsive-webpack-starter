@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="18px" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 3.8.3 (29801) - http://www.bohemiancoding.com/sketch -->
+    <title>Email Address</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-Form" transform="translate(-477.000000, -440.000000)" fill="#BDBDBD">
+            <g id="Form" transform="translate(435.000000, 246.000000)">
+                <g id="Email-Address" transform="translate(31.000000, 180.000000)">
+                    <path d="M32.5625,29 C32.5625,29.15225 32.5344688,29.29625 32.4942188,29.4335 L26.09375,22.25 L32.5625,17 L32.5625,29 L32.5625,29 Z M13.555875,30.4595 L20.041875,23.2475 L22.5,25.18625 L24.85175,23.2355 L31.444125,30.4595 C31.3413438,30.48425 13.6586563,30.48425 13.555875,30.4595 L13.555875,30.4595 Z M12.4375,29 L12.4375,17 L18.90625,22.25 L12.5057813,29.4335 C12.4655312,29.29625 12.4375,29.15225 12.4375,29 L12.4375,29 Z M31.84375,15.5 L22.5,23 L13.15625,15.5 L31.84375,15.5 L31.84375,15.5 Z M31.125,14 L13.875,14 C12.2872812,14 11,15.34325 11,17 L11,29 C11,30.65675 12.2872812,32 13.875,32 L31.125,32 C32.7127188,32 34,30.65675 34,29 L34,17 C34,15.34325 32.7127188,14 31.125,14 L31.125,14 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

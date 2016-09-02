@@ -1,0 +1,84 @@
+:local(.color-black) {
+  color: #000
+}
+
+:local(.color-off-black) {
+  color: #121212;
+}
+
+:local(.color-body-default) {
+  color: #383838;
+}
+
+:local(.background-off-black) {
+  background-color: #121212;
+}
+
+:local(.casestudy-background) {
+  background-color: #414141;
+}
+
+:local(.footer-background) {
+  background-color: #000;
+}
+
+:local(.background-off-black):before,
+:local(.background-off-black):after {
+  background-color: #121212;
+}
+
+:local(.color-off-grey) {
+  color: #6e6e6e;
+}
+
+:local(.color-white) {
+  color: #fff;
+}
+
+:local(.background-white) {
+  background-color: #fff;
+}
+
+:local(.background-light-grey) {
+  background-color: #f0f0f0;
+}
+
+:local(.background-off-white) {
+  background-color: #f8f8f8;
+}
+
+:local(.background-yellow-grad) {
+  background-image: linear-gradient(131deg, #c78c39 0%, #f1ce38 100%);
+}
+
+:local(.background-green-grad) {
+  background-image: linear-gradient(130deg, #006150 -7%, #6ab90d 30%);
+}
+
+:local(.background-blue-grad) {
+  background-image: linear-gradient(225deg, #0f5078 0%, #0078bf 54%);
+}
+
+:local(.background-orange-grad) {
+  background-image: linear-gradient(-221deg, #fa9b27 0%, #fbaf3f 54%);
+}
+
+:local(.background-green) {
+  background-color: #63d31f;
+  border: 2px solid #63d31f;
+}
+
+:local(.background-blue) {
+  background-color: #0078bf;
+  border: 2px solid #0078bf;
+}
+
+:local(.background-yellow) {
+  background-color: #efcb38;
+  border: 2px solid #efcb38;
+}
+
+:local(.background-orange) {
+  background-color: #fa9b27;
+  border: 2px solid #fa9b27;
+}

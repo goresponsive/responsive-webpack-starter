@@ -1,0 +1,219 @@
+//global base
+@import '~base.scss';
+
+:local(.container) {
+  width: 100%;
+  display: inline-block;
+  @media(min-width: $ipadPort) {
+    padding: 22px 0;
+  }
+}
+
+:local(.navbar) {
+  padding: 0;
+  display: none;
+  margin: 0;
+  @media(min-width: 768px) {
+    display: inline-block;
+    max-width: 90%;
+    float: right;
+  }
+  :global(.open) & {
+    display: block;
+  }
+  :global(.nav) {
+    float: right;
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+    @media(min-width: 768px) {
+      float: right;
+    }
+    :global(li) {
+      margin-bottom: 20px;
+      @media(min-width: $iphone5) {
+        margin-bottom: 5px;
+      }
+      @media (min-width: $ipadPort) {
+        margin-bottom: 0;
+      }
+    }
+    :global(a) {
+      letter-spacing: 1px;
+      color: #FFF;
+      &:hover,
+      &:active,
+      &:focus {
+        background: transparent;
+        background-color: transparent;
+        &:after {
+          height: 1px;
+          background: #73DF31;
+          content: '';
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+    :global([class*="icon-"]) {
+      font-size: 20px;
+      color: #73DF31;
+      &:hover,
+      &:active,
+      &:focus {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    :global(.featured) {
+      border: 1px solid #73DF31;
+      &:hover {
+        border-color: #FFF;
+      }
+      &::after {
+        height: 0;
+        display: none !important;
+      }
+    }
+    :global(.active:after) {
+      height: 1px;
+      background: #73DF31;
+      content: '';
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+:global(header) {
+  :global(.navbar-collapse) {
+    display: none;
+  }
+  :global(.logo) {
+    float: left;
+  }
+  :global(.navbar-header) {
+    width: 100%;
+    @media(min-width: $ipadPort) {
+      width: auto;
+    }
+  }
+  :global(.navbar) {
+    min-height: auto;
+  }
+  &:global(.open) {
+    height: 100%;
+    background: transparentize($gray-dark, .1);
+    .navbar-nav, .navbar-collapse {
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  :global(span) {
+    float: right;
+    cursor: pointer;
+    font-size: 32px;
+  }
+
+}
+
+:global(#menu-toggle) {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  box-sizing: border-box;
+  float: right;
+  @media(min-width: $ipadPort) {
+    display: none;
+  }
+  span {
+    background: #FFF;
+    transition: .25s ease-in-out;
+    display: block;
+    clear: both;
+    will-change: transform, left, top;
+  }
+  :global(#hamburger) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+    span {
+      width: 35px;
+      height: 4px;
+      position: relative;
+      top: 10px;
+      left: 20px;
+      margin: 4px 0;
+      &:nth-child(1) {
+        transition-delay: .5s;
+      }
+      &:nth-child(2) {
+        transition-delay: .625s;
+      }
+      &:nth-child(3) {
+        transition-delay: .75s;
+      }
+    }
+  }
+  :global(#cross) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
+    span {
+      &:nth-child(1) {
+        height: 0%;
+        width: 4px;
+        position: absolute;
+        top: 10%;
+        left: 19px;
+        transition-delay: 0s;
+      }
+      &:nth-child(2) {
+        width: 0%;
+        height: 4px;
+        position: absolute;
+        left: 10%;
+        top: 19px;
+        transition-delay: .25s;
+      }
+    }
+  }
+}
+
+:global(#menu-toggle.close) {
+  :global(#hamburger) {
+    span {
+      width: 0%;
+      &:nth-child(1) {
+        transition-delay: 0s;
+      }
+      &:nth-child(2) {
+        transition-delay: .125s;
+      }
+      &:nth-child(3) {
+        transition-delay: .25s;
+      }
+    }
+  }
+  :global(#cross) {
+    span {
+      &:nth-child(1) {
+        height: 100%;
+        transition-delay: .625s;
+      }
+    }
+    span {
+      &:nth-child(2) {
+        width: 100%;
+        transition-delay: .375s;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'mixins';
+
+// Global
+:global(.center-block) {
+  float: none;
+}
+
+// Local
+:local(.section) {
+  padding: rem(60px 0);
+  @media(min-width: $ipadPort) {
+    padding: rem(100px 0);
+  }
+}
+
+:local(.section-half) {
+  padding: rem(45px 0);
+  @media(min-width: $ipadPort) {
+    padding: rem(60px 0);
+  }
+}
+
+:local(.section-half-top) {
+  composes: section;
+  padding-bottom: rem(45px);
+  @media(min-width: $ipadLand) {
+    padding-top: rem(60px);
+  }
+}
+
+:local(.half-bottom-space) {
+  padding-bottom: rem(45px);
+  @media(min-width: $ipadLand) {
+    padding-bottom: rem(60px);
+  }
+}
+
+:local(div.col-md-5th) {
+  width: 50%;
+  padding-left: rem(15px);
+  padding-right: rem(15px);
+  @media(min-width: $iphone6) {
+    width: 25%;
+  }
+  @media(min-width: $iphone6p) {
+    width: 20%;
+  }
+}
+
+:local(.section-no-bot) {
+  padding: rem(60px 0);
+  @media(min-width: $ipadPort) {
+    padding: rem(100px 0);
+  }
+}
+
+:local(.full-width-dark) {
+  composes: section;
+  composes: color-white background-off-black from 'sass!../css/colors.scss';
+  &:before, &:after {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+  }
+
+  &:after {
+    left: auto;
+    right: -100%;
+  }
+}
+
+:local(.topSpace) {
+  padding-top: rem(60px);
+  @media($iphone6p) {
+    padding-top: rem(100px);
+  }
+}
+
+:local(.bottomSpace) {
+  padding-bottom: rem(60px);
+  @media($iphone6p) {
+    padding-bottom: rem(100px);
+  }
+}
+
