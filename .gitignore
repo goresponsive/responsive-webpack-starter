@@ -9,3 +9,4 @@ app/media
 # Generated modules
 node_modules
 webp-cache
+sbin
