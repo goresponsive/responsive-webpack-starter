@@ -4,7 +4,7 @@ A boilerplate for running a Backbone.js Webpack workflow in Node express
 #Presentation PDF link
 Download the presentation Keynote 
 
-https://drive.google.com/a/responsive.co.za/file/d/0B9JSGsla8tsCVWgxSEU5Vi1IRFk
+[PDF Download]https://drive.google.com/a/responsive.co.za/file/d/0B9JSGsla8tsCVWgxSEU5Vi1IRFk
 
 Inspired by [this project](https://github.com/vesparny/react-kickstart) and the evolving of [react-transform](https://github.com/gaearon/react-transform-boilerplate) and [CSS Modules]((http://glenmaddern.com/articles/css-modules)).
 
