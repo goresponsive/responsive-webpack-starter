@@ -1,10 +1,11 @@
 # responsive-webpack-starter
 A boilerplate for running a Backbone.js Webpack workflow in Node express
 
-Please read the following article: [The ultimate Webpack setup](http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup) to know more about this boilerplate.
+#Presentation PDF link
+Download the presentation Keynote 
+https://github.com/goresponsive/responsive-webpack-starter.git 
 
-## Major update to project
-Inspired by [this project](https://github.com/vesparny/react-kickstart) and the evolving of [react-transform](https://github.com/gaearon/react-transform-boilerplate) and [CSS Modules]((http://glenmaddern.com/articles/css-modules)), this project has gotten a major upgrade.
+Inspired by [this project](https://github.com/vesparny/react-kickstart) and the evolving of [react-transform](https://github.com/gaearon/react-transform-boilerplate) and [CSS Modules]((http://glenmaddern.com/articles/css-modules)).
 
 **NOTE!** Use the latest version of Node, 5.x.x.
 
